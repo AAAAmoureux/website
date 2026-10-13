@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>观看视频</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111111;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background: #000000;
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-container">
+
+        <h1>观看视频</h1>
+
+        <video id="myVideo" controls playsinline preload="metadata">
+            <source src="video.mp4" type="video/mp4">
+            你的浏览器暂不支持视频播放。
+        </video>
+
+        <!-- 视频下方的文字 -->
+        <div class="bottom-text">
+            老大真好~请你吃饭或者啥都行~爱你❤️
+        </div>
+
+    </div>
+
+    <script>
+        // 获取视频元素
+        const video = document.getElementById("myVideo");
+
+        // 设置视频默认音量为 30%
+        video.volume = 0.3;
+    </script>
+
+</body>
+</html>

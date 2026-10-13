@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 24px;
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 14px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-one {
+            background: #3978f6;
+        }
+
+        .btn-two {
+            background: #222222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 顶部图片：将这里替换成你的图片路径 -->
+        <img
+            class="main-image"
+            src="images/1.jpg"
+            alt="网页展示图片"
+        >
+
+        <!-- 按钮一：跳转到一句话 -->
+        <button class="btn btn-one" onclick="goToVideo()">
+            复原吧~
+        </button>
+
+        <!-- 按钮二：跳转到视频 -->
+        <button class="btn btn-two" onclick="goToText()">
+            拒绝！
+        </button>
+
+    </div>
+
+    <script>
+        // 按钮一：显示一句话
+        function goToText() {
+            window.location.href =
+                "text.html";
+        }
+
+        // 按钮二：跳转到视频
+        function goToVideo() {
+            window.location.href =
+                "video.html";
+        }
+    </script>
+</body>
+</html>
